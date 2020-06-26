@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://memento.net.cn/post/7bf40deb.html</loc>
+    
+    <lastmod>2020-06-26T10:06:53.191Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://memento.net.cn/resources/index.html</loc>
     
     <lastmod>2020-06-26T09:05:04.623Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://memento.net.cn/post/dcfce0c7.html</loc>
     
     <lastmod>2020-06-26T09:00:26.941Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://memento.net.cn/post/7bf40deb.html</loc>
-    
-    <lastmod>2020-06-26T08:56:21.010Z</lastmod>
     
   </url>
   
@@ -184,14 +184,14 @@
   </url>
   
   <url>
-    <loc>http://memento.net.cn/README.html</loc>
+    <loc>http://memento.net.cn/404.html</loc>
     
     <lastmod>2020-06-15T14:09:36.065Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://memento.net.cn/404.html</loc>
+    <loc>http://memento.net.cn/README.html</loc>
     
     <lastmod>2020-06-15T14:09:36.065Z</lastmod>
     
