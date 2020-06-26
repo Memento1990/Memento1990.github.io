@@ -213,20 +213,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[彻底禁止 Win10 系统自动更新]]></title>
-    <url>%2Fpost%2F90bec697.html</url>
-    <content type="text"><![CDATA[Windows Update 服务依次进入 控制面板 - 管理工具 - 服务 or win+R - services.msc, 找到 Windows Update 服务，双击打开属性后，将 启动类型 改为 禁用, 并停止当前的服务。 接着跳转到 恢复 页签，将 第一次失败 的 重新启动服务 修改为 无操作。 计划任务程序依次进入 控制面板 - 计划任务 - Microsoft - Windows - WindowUpdate, 将其中右侧中的所有触发全部禁用, 如下图: 注册表通过 win+r - regedit 进入注册表, 然后依次找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching, 将 SearchOrderConfig 的默认值 1 改为 0; 组策略通过 win+r - gpedit.msc 进入组策略, 然后依次找到 gpedit.msc - 计算机配置 - 管理模版 - 系统 - Internet 通信管理 - Internet 通信设置, 将其中的 关闭 Windows 更新设备驱动程序搜索 更改为已启用;]]></content>
-      <categories>
-        <category>FAQ</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-        <tag>Windows10</tag>
-        <tag>设置</tag>
-        <tag>自动更新</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[[文章汇总] Hexo 博客系列 [最近更新: 2019/04/24]]]></title>
     <url>%2Fpost%2F3943aa90.html</url>
     <content type="text"><![CDATA[一. 系列文章通道 [Hexo 博客系列-01] 基本设置 [最新更新: 2019-04-25] [Hexo 博客系列-02] 第三方插件 [最新更新: 2019-03-30] [Hexo 博客系列-03] 博客优化 [最新更新: 2019-03-30] [Hexo 博客系列-04] 主题改造 [最新更新: 2019-03-30] 插件系列文章 [Hexo 博客插件系列-01] 相关文章之 hexo-related-popular-posts [最新更新: 2019-04-13] [Hexo 博客插件系列-02] 语雀 yuque-hexo [最新更新: 2019-04-15] [Hexo 博客插件系列-03] 博客备份 hexo-git-backup [最新更新: 2019-04-25] [Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud [最新更新: 2019-04-25] 二. 更新预览Update 2019-12-06 增加工信部备案链接; Update 2019-04-25 增加侧边栏中的近期文章模块; Update 2019-04-24 21:30:33 增加 tags/archives menu 的内容量显示; Update 2019-03-27 增加 CNZZ友盟统计 增加 3D 标签云 Update 2019-03-25 17:34 优化 友链样式 Update 2019-03-23 21:34 增加 聊天模块 DaoVioce 修复 NexT 主题添加多字体 增加 内容分享, AddThis 增加 评论模块 增加 文章底部版权信息+复制文本版权信息 修复 文章加密访问 增加 压缩资源: neat 增加 自定义样式 三. Hexo 相关知识点front-matter 参数 描述 默认值 layout 布局 title 标题 date 建立日期 文件建立日期 updated 更新日期 文件更新日期 comments 开启文章的评论功能 true tags 标签（不适用于分页） categories 分类（不适用于分页） permalink 覆盖文章网址 四. 参考 hexo 官网 NexT 主题 NexT 主题官网 hexo的next主题个性化教程：打造炫酷网站 【持续更新】最全Hexo博客搭建+主题优化+插件配置+常用操作+错误分析 Hexo Next 博客自定义配置 打造个性超赞博客Hexo+NexT+GitHubPages的超深度优化 NexT 主题优化 主题配置]]></content>
@@ -238,6 +224,20 @@
         <tag>next</tag>
         <tag>github</tag>
         <tag>文章汇总</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[彻底禁止 Win10 系统自动更新]]></title>
+    <url>%2Fpost%2F90bec697.html</url>
+    <content type="text"><![CDATA[Windows Update 服务依次进入 控制面板 - 管理工具 - 服务 or win+R - services.msc, 找到 Windows Update 服务，双击打开属性后，将 启动类型 改为 禁用, 并停止当前的服务。 接着跳转到 恢复 页签，将 第一次失败 的 重新启动服务 修改为 无操作。 计划任务程序依次进入 控制面板 - 计划任务 - Microsoft - Windows - WindowUpdate, 将其中右侧中的所有触发全部禁用, 如下图: 注册表通过 win+r - regedit 进入注册表, 然后依次找到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\DriverSearching, 将 SearchOrderConfig 的默认值 1 改为 0; 组策略通过 win+r - gpedit.msc 进入组策略, 然后依次找到 gpedit.msc - 计算机配置 - 管理模版 - 系统 - Internet 通信管理 - Internet 通信设置, 将其中的 关闭 Windows 更新设备驱动程序搜索 更改为已启用;]]></content>
+      <categories>
+        <category>FAQ</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+        <tag>Windows10</tag>
+        <tag>设置</tag>
+        <tag>自动更新</tag>
       </tags>
   </entry>
 </search>
