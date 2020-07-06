@@ -52,11 +52,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[test]]></title>
-    <url>%2Fpost%2Fd87f7e0c.html</url>
-    <content type="text"><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Windows 添加 VSCode 右键菜单]]></title>
     <url>%2Fpost%2Feee682a1.html</url>
     <content type="text"><![CDATA[阁主在安装 VSCode 的时候手残, 取消了添加右键菜单的功能, VSCode 默认会添加两个右键菜单, 一个是打开文件的时候以 VSCode 方式打开, 一个是将当前文件夹作为工作目录在 VSCode 中打开, 用着用着发觉还是很实用的, 可是悔不当初没有安装啊~ 现在该如何恢复这两个很实用的右键菜单呢? 在 Windows 操作系统下, 自然是去修改注册表. 但是一般人操作注册表都是一脸懵逼, 导出搜索如何修改注册表, 去哪里修改注册表的, 很麻烦.于是阁主整理了一下注册表内容, 你们只要复制粘贴到一个 文件.reg 里, 然后双击确定导入注册表即可~拿走不谢o(￣︶￣)o 123456789101112131415Windows Registry Editor Version 5.00[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode]@=&quot;Open VSCode Here&quot;&quot;Icon&quot;=&quot;[Microsoft VS Code - Code.exe]&quot;[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCode\command]@=&quot;[Microsoft VS Code - Code.exe] .&quot;[HKEY_CLASSES_ROOT\Directory\shell\VSCode]@=&quot;Open with VSCode&quot;&quot;Icon&quot;=&quot;[Microsoft VS Code - Code.exe]&quot;[HKEY_CLASSES_ROOT\Directory\shell\VSCode\command]@=&quot;[Microsoft VS Code - Code.exe] %1&quot; 注意, 代码中的 [Microsoft VS Code - Code.exe] 部分, 要根据你实际的 VSCode 安装路径进行设置, 你可以利用 Everything 等一些软件查找 Code.exe 文件所在路径, 然后放到这里. 以阁主本地为例是 C:\\Users\\Memento\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe; 其中前两个是在文件夹的背景中右键菜单里的 Open VScode here, 即以当前目录作为工作空间, 在 VSCode 中打开;后两个是在文件的右键菜单中 Open with VSCode, 即当前文件以 VSCode 的方式打开; Share it~]]></content>

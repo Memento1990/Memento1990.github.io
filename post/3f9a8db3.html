@@ -1,4 +1,1285 @@
-<!DOCTYPE html><html class="theme-next gemini use-motion" lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"><meta name="theme-color" content="#222"><meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css"><meta name="google-site-verification" content="w8WKJGAHwLb_zRDXXltme46tLBr-lH5Twh-IxEBSAYI"><meta name="msvalidate.01" content="F9BCBB6FD152A84AC15581C406FAB2E7"><meta name="baidu-site-verification" content="TOFMGIfar4"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css"><link rel="stylesheet" href="/css/main.css?v=7.0.1"><link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-64x64.png?v=7.0.1"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.0.1"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.0.1"><link rel="mask-icon" href="/images/favicon.svg?v=7.0.1" color="#222"><script id="hexo.configurations">var NexT=window.NexT||{},CONFIG={root:"/",scheme:"Gemini",version:"7.0.1",sidebar:{position:"left",display:"post",offset:12,onmobile:!1,dimmer:!1,widget:"related_posts"},back2top:!0,back2top_sidebar:!0,fancybox:!0,fastclick:!1,lazyload:!0,tabs:!0,motion:{enable:!0,async:!1,transition:{post_block:"fadeIn",post_header:"slideDownIn",post_body:"slideDownIn",coll_header:"slideLeftIn",sidebar:"slideUpIn"}},algolia:{applicationID:"",apiKey:"",indexName:"",hits:{per_page:10},labels:{input_placeholder:"Search for Posts",hits_empty:"We didn't find any results for the search: ${query}",hits_stats:"${hits} results found in ${time} ms"}}}</script><meta name="description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~"><meta name="keywords" content="hexo,新手,小白,攻略,安装,部署"><meta property="og:type" content="article"><meta property="og:title" content="[Hexo 博客系列-00] 基础安装部署教程"><meta property="og:url" content="https://memento.net.cn/post/3f9a8db3.html"><meta property="og:site_name" content="琅涯阁"><meta property="og:description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2020-06-15T14:09:36.071Z"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="[Hexo 博客系列-00] 基础安装部署教程"><meta name="twitter:description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~"><link rel="canonical" href="https://memento.net.cn/post/3f9a8db3.html"><script id="page.configurations">CONFIG.page={sidebar:""}</script><title>[Hexo 博客系列-00] 基础安装部署教程 | 琅涯阁</title><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2b512f848a24cc63465604675a8ca4fa";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><noscript><style>.sidebar-inner,.use-motion .brand,.use-motion .collection-title,.use-motion .comments,.use-motion .menu-item,.use-motion .motion-element,.use-motion .pagination,.use-motion .post-block,.use-motion .post-body,.use-motion .post-header{opacity:initial}.use-motion .logo,.use-motion .site-subtitle,.use-motion .site-title{opacity:initial;top:initial}.use-motion .logo-line-before i{left:initial}.use-motion .logo-line-after i{right:initial}</style></noscript></head><body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN"><div class="container sidebar-position-left page-post-detail"><div class="headband"></div><header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="header-inner"><div class="site-brand-wrapper"><div class="site-meta"><div class="custom-logo-site-title"><a href="/" class="brand" rel="start"><span class="logo-line-before"><i></i></span> <span class="site-title">琅涯阁</span><span class="logo-line-after"><i></i></span></a></div><h1 class="site-subtitle" itemprop="description"><img src="/images/title.png" style="width:60%"></h1></div><div class="site-nav-toggle"><button aria-label="切换导航栏"><span class="btn-bar"></span><span class="btn-bar"></span><span class="btn-bar"></span></button></div></div><nav class="site-nav"><ul id="menu" class="menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i><br>首页</a></li><li class="menu-item menu-item-文档"><a href="/onlinedocs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i><br>文档</a></li><li class="menu-item menu-item-资源(多图)"><a href="/resources/" rel="section"><i class="menu-item-icon fa fa-fw fa-envira"></i><br>资源(多图)</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i><br>标签<span class="badge">38</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i><br>归档<span class="badge">20</span></a></li><li class="menu-item menu-item-关于"><a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i><br>关于</a></li><li class="menu-item menu-item-search"><a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i><br>搜索</a></li></ul><div class="site-search"><div class="popup search-popup local-search-popup"><div class="local-search-header clearfix"><span class="search-icon"><i class="fa fa-search"></i></span><span class="popup-btn-close"><i class="fa fa-times-circle"></i></span><div class="local-search-input-wrapper"><input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input"></div></div><div id="local-search-result"></div></div></div></nav><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?2b512f848a24cc63465604675a8ca4fa";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script></div></header><a href="https://github.com/Memento1990" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#222;color:#fff;position:absolute;top:0;border:0;right:0" aria-hidden="true"><path d="M0 0 115 115 130 115 142 142 250 250 250 0Z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4L133.7 101.6C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8Z" fill="currentColor" class="octo-body"/></svg></a><main id="main" class="main"><div class="main-inner"><div class="content-wrap"><div id="content" class="content"><div id="posts" class="posts-expand"><article class="post post-type-normal" itemscope itemtype="http://schema.org/Article"><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/post/dcfce0c7.html" rel="next" title="[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud"><i class="fa fa-chevron-left"></i> [Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/post/eee682a1.html" rel="prev" title="Windows 添加 VSCode 右键菜单">Windows 添加 VSCode 右键菜单<i class="fa fa-chevron-right"></i></a></div></div><div class="post-block"><link itemprop="mainEntityOfPage" href="https://memento.net.cn/post/3f9a8db3.html"><span hidden itemprop="author" itemscope itemtype="http://schema.org/Person"><meta itemprop="name" content="Memento"><meta itemprop="description" content="吾生也有涯, 而知也无涯"><meta itemprop="image" content="/images/favicon-64x64.png"></span><span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization"><meta itemprop="name" content="琅涯阁"></span><header class="post-header"><h2 class="post-title" itemprop="name headline">[Hexo 博客系列-00] 基础安装部署教程</h2><div class="post-meta"><span class="post-time"><span class="post-meta-item-icon"><i class="fa fa-calendar-o"></i></span> <span class="post-meta-item-text">发表于</span> <time title="创建时间：2019-04-26 08:46:55" itemprop="dateCreated datePublished" datetime="2019-04-26T08:46:55+08:00">2019-04-26</time> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-calendar-check-o"></i></span> <span class="post-meta-item-text">更新于</span> <time title="修改时间：2020-06-15 22:09:36" itemprop="dateModified" datetime="2020-06-15T22:09:36+08:00">2020-06-15</time></span> <span class="post-category"><span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-folder-o"></i></span> <span class="post-meta-item-text">分类于</span> <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span></span><div class="post-symbolscount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span> <span class="post-meta-item-text">本文字数：</span> <span title="本文字数">668</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-clock-o"></i></span> <span class="post-meta-item-text">阅读时长 &asymp;</span> <span title="阅读时长">1 分钟</span></div></div></header><div class="post-body" itemprop="articleBody"><p></p><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>加了几个 Hexo 的技术讨论群, 经常可以讨论一些 hexo 的技巧和解决一些问题, 挺好的. 这些群号会在文末进行分享, 当然也有一个是阁主想搭建并长期维护和分享的 Hexo 技术讨论群, 欢迎大家的加入~</p><p>这段期间里, 在群里偶尔会遇见一些没有开发经验的人, 他们也想要搭建起一个自己的博客平台, 分享自己的知识总结, 所见所闻. 但是对于 hexo 的安装配置过程总是遇见或这或那的问题, 网上查询解决办法也是磕磕绊绊的, 总结就两个字: 郁闷(＃￣～￣＃)</p><p>本来阁主是在维护一个 <a href="http://memento.net.cn/post/3943aa90.html">Hexo 博客系列</a> 的, 里面的内容主要想介绍一些<a href="http://memento.net.cn/post/4f47e744.html">基本设置</a>, <a href="http://memento.net.cn/post/67805eb2.html">插件安装使用</a>, <a href="http://memento.net.cn/post/bc92e064.html">主题深度定制</a>的内容的, 没想着再去写一篇基础的安装部署教程的, 因为阁主在安装部署的时候, 可以从网上找到一箩筐的安装部署教程, 虽然参差不齐, 但好在量多, 同时参考一两篇, 阁主原以为搞定这些还是不成问题的. 但是~还是从网友那里发现了这样那样的问题, 而且网上也不容易搜索到相对应的解决方法. 所以阁主在这里补上这第 00 篇的教程~ 烦请不吝赐教.</p><h2 id="2-前提"><a href="#2-前提" class="headerlink" title="2. 前提"></a>2. 前提</h2><p>首先呢, 如果是个真小白, 就是不会编程, 不会前端, 不会这, 不会那的, 阁主一万个建议你规规矩矩选择 NexT 主题, 为啥嘞, 因为其有一个靠得住的团队支持, 再因为就是网上资源多, 最后因为用的人多帮你的人也就多~<br>当然, 这个主题还是不错的, 提供了四种模板可供选择,</p><p>如果你强行坚持使用其他主题, 阁主的系列文章你只能当做参考喽~祝君好运!!!</p><h2 id="3-正文"><a href="#3-正文" class="headerlink" title="3. 正文"></a>3. 正文</h2><h3 id="3-1-准备工作"><a href="#3-1-准备工作" class="headerlink" title="3.1. 准备工作"></a>3.1. 准备工作</h3></div><div><div><br><div style="text-align:center;color:#ccc;font-size:14px">--------------------本文至此结束&nbsp;<i class="fa fa-heartbeat"></i>&nbsp;感谢您的阅读--------------------</div><br></div></div><blockquote><div class="popular-posts-header">猜你还想看</div></blockquote><ul class="popular-posts"><li class="popular-posts-item"><div class="popular-posts-title"><a href="\post\3943aa90.html" rel="bookmark">[文章汇总] Hexo 博客系列 [最近更新: 2019/04/24]</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="\post\b96cbb80.html" rel="bookmark">[Hexo 博客插件系列-03] 博客备份 hexo-git-backup</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="\post\dcfce0c7.html" rel="bookmark">[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="\post\7bf40deb.html" rel="bookmark">[Hexo 博客 FAQ 系列-01] warning LF will be replaced by CRLF in</a></div></li><li class="popular-posts-item"><div class="popular-posts-title"><a href="\post\6f3f19b1.html" rel="bookmark">[Hexo 博客插件系列-02] 语雀 yuque-hexo</a></div></li></ul><div><div class="my_post_copyright"><p><span>本文标题:</span><a href="/post/3f9a8db3.html">[Hexo 博客系列-00] 基础安装部署教程</a></p><p><span>文章作者:</span><a href="/" title="访问 Memento 的个人博客">Memento</a></p><p><span>发布时间:</span>2019年04月26日 - 08:04</p><p><span>最后更新:</span>2020年06月15日 - 22:06</p><p><span>原始链接:</span><a href="/post/3f9a8db3.html" title="[Hexo 博客系列-00] 基础安装部署教程">https://memento.net.cn/post/3f9a8db3.html</a></p><p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p></div><script>function addLink(){var e=document.body,n=window.getSelection(),t="原文出自[Memento 博客](http://memento.net.cn)",o="除特别声明外，署名-非商业性使用-禁止演绎 4.0 国际",i="转载请保留原文链接及作者: "+document.location.href;if(window.clipboardData){var d=n+"\r\n\r\n"+t+"\n"+o+"\n"+i;return window.clipboardData.setData("Text",d),!1}d=n+"<br /><br />"+t+"<br />"+o+"<br />"+i;var r=document.createElement("div");r.style.position="absolute",r.style.left="-99999px",e.appendChild(r),r.innerHTML=d,n.selectAllChildren(r),window.setTimeout(function(){e.removeChild(r)},0)}document.oncopy=addLink</script></div><footer class="post-footer"><div class="post-tags"><a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a><a href="/tags/新手/" rel="tag"><i class="fa fa-tag"></i> 新手</a><a href="/tags/小白/" rel="tag"><i class="fa fa-tag"></i> 小白</a><a href="/tags/攻略/" rel="tag"><i class="fa fa-tag"></i> 攻略</a><a href="/tags/安装/" rel="tag"><i class="fa fa-tag"></i> 安装</a><a href="/tags/部署/" rel="tag"><i class="fa fa-tag"></i> 部署</a></div></footer></div><div class="post-nav"><div class="post-nav-next post-nav-item"><a href="/post/dcfce0c7.html" rel="next" title="[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud"><i class="fa fa-chevron-left"></i> [Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud</a></div><span class="post-nav-divider"></span><div class="post-nav-prev post-nav-item"><a href="/post/eee682a1.html" rel="prev" title="Windows 添加 VSCode 右键菜单">Windows 添加 VSCode 右键菜单<i class="fa fa-chevron-right"></i></a></div></div></article></div></div></div><div class="sidebar-toggle"><div class="sidebar-toggle-line-wrap"><span class="sidebar-toggle-line sidebar-toggle-line-first"></span><span class="sidebar-toggle-line sidebar-toggle-line-middle"></span><span class="sidebar-toggle-line sidebar-toggle-line-last"></span></div></div><aside id="sidebar" class="sidebar"><div class="sidebar-inner"><ul class="sidebar-nav motion-element"><li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">文章目录</li><li class="sidebar-nav-overview" data-target="site-overview-wrap">站点概览</li></ul><div class="site-overview-wrap sidebar-panel"><div class="site-overview"><div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person"><img class="site-author-image" itemprop="image" src="/images/favicon-64x64.png" alt="Memento"><p class="site-author-name" itemprop="name">Memento</p><div class="site-description motion-element" itemprop="description">吾生也有涯, 而知也无涯</div></div><nav class="site-state motion-element"><div class="site-state-item site-state-posts"><a href="/archives/"><span class="site-state-item-count">20</span> <span class="site-state-item-name">日志</span></a></div><div class="site-state-item site-state-categories"><a href="/categories/"><span class="site-state-item-count">4</span> <span class="site-state-item-name">分类</span></a></div><div class="site-state-item site-state-tags"><a href="/tags/"><span class="site-state-item-count">38</span> <span class="site-state-item-name">标签</span></a></div></nav><div class="links-of-author motion-element"><span class="links-of-author-item"><a href="https://github.com/Memento1990" title="GitHub &rarr; https://github.com/Memento1990" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i> GitHub</a></span><span class="links-of-author-item"><a href="http://www.cnblogs.com/memento" title="博客园 &rarr; http://www.cnblogs.com/memento" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-star"></i> 博客园</a></span><span class="links-of-author-item"><a href="https://blog.csdn.net/qq_42025719" title="CSDN &rarr; https://blog.csdn.net/qq_42025719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-codiepie"></i> CSDN</a></span><span class="links-of-author-item"><a href="mailto:731996261@qq.com" title="E-Mail &rarr; mailto:731996261@qq.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i> E-Mail</a></span></div></div></div><div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active"><div class="post-toc"><div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-前提"><span class="nav-number">2.</span> <span class="nav-text">2. 前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-正文"><span class="nav-number">3.</span> <span class="nav-text">3. 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. 准备工作</span></a></li></ol></li></ol></div></div></div><div class="back-to-top"><i class="fa fa-arrow-up"></i> <span id="scrollpercent"><span>0</span>%</span></div></div></aside></div></main><footer id="footer" class="footer"><div class="footer-inner"><div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span><span class="with-love" id="animate"><i class="fa fa-heart"></i></span> <span class="author" itemprop="copyrightHolder">琅涯阁</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-area-chart"></i></span> <span title="站点总字数">47k</span> <span class="post-meta-divider">|</span><span class="post-meta-item-icon"><i class="fa fa-coffee"></i></span> <span title="站点阅读时长">43 分钟</span> <a href="http://www.beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank">粤ICP备19147538号</a></div><span id="sitetime"></span><script language="javascript">function siteTime(){window.setTimeout("siteTime()",1e3);var e=36e5,t=24*e,o=new Date,i=o.getFullYear(),a=o.getMonth()+1,n=o.getDate(),r=o.getHours(),l=o.getMinutes(),s=o.getSeconds(),M=Date.UTC(2019,3,18,16,39,37),g=Date.UTC(i,a,n,r,l,s)-M,m=Math.floor(g/31536e6),T=Math.floor(g/t-365*m),f=Math.floor((g-(365*m+T)*t)/e),h=Math.floor((g-(365*m+T)*t-f*e)/6e4),u=Math.floor((g-(365*m+T)*t-f*e-6e4*h)/1e3);document.getElementById("sitetime").innerHTML=" 本站已运行 "+T+" 天 "+f+" 小时 "+h+" 分钟 "+u+" 秒"}siteTime()</script><div><script>var cnzz_protocol="https:"==document.location.protocol?"https://":"http://";document.write(unescape("%3Cspan id='cnzz_stat_icon_1276813148'%3E%3C/span%3E%3Cscript src='"+cnzz_protocol+"s23.cnzz.com/z_stat.php%3Fid%3D1276813148%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"))</script></div></div></footer></div><script>"[object Function]"!==Object.prototype.toString.call(window.Promise)&&(window.Promise=null)</script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script><script src="/js/src/utils.js?v=7.0.1"></script><script src="/js/src/motion.js?v=7.0.1"></script><script src="/js/src/affix.js?v=7.0.1"></script><script src="/js/src/schemes/pisces.js?v=7.0.1"></script><script src="/js/src/scrollspy.js?v=7.0.1"></script><script src="/js/src/post-details.js?v=7.0.1"></script><script src="/js/src/next-boot.js?v=7.0.1"></script><script>// Popup Window;
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="w8WKJGAHwLb_zRDXXltme46tLBr-lH5Twh-IxEBSAYI">
+
+
+
+  <meta name="msvalidate.01" content="F9BCBB6FD152A84AC15581C406FAB2E7">
+
+
+
+
+
+  <meta name="baidu-site-verification" content="TOFMGIfar4">
+
+
+
+
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.css">
+
+
+
+
+
+
+
+  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-64x64.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.ico?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.ico?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/favicon.svg?v=7.0.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false,"widget":"related_posts"},
+    back2top: true,
+    back2top_sidebar: true,
+    fancybox: true,
+    fastclick: false,
+    lazyload: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~">
+<meta name="keywords" content="hexo,新手,小白,攻略,安装,部署">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo 博客系列-00] 基础安装部署教程">
+<meta property="og:url" content="https://memento.net.cn/post/3f9a8db3.html">
+<meta property="og:site_name" content="琅涯阁">
+<meta property="og:description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-06-15T14:09:36.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Hexo 博客系列-00] 基础安装部署教程">
+<meta name="twitter:description" content="我是新手, 我是小白, 我什么也不会, 但是我就是想用 Hexo 来部署一个自己的网站/博客, how?就让阁主手把手来教你吧, 有问题有疑问请在文章下方留言, 阁主 24 小时帮你 debug~真的吗? 假的~">
+
+
+
+
+
+
+  <link rel="canonical" href="https://memento.net.cn/post/3f9a8db3.html">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>[Hexo 博客系列-00] 基础安装部署教程 | 琅涯阁</title>
+  
+
+
+
+
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?2b512f848a24cc63465604675a8ca4fa";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta" style>
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">琅涯阁</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <h1 class="site-subtitle" itemprop="description"><img src="/images/title.png" style="width:60%"></h1>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-首页">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-文档">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/onlinedocs/" rel="section"><i class="menu-item-icon fa fa-fw fa-book"></i> <br>文档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-资源(多图)">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/resources/" rel="section"><i class="menu-item-icon fa fa-fw fa-envira"></i> <br>资源(多图)</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">38</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>归档<span class="badge">19</span></a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-关于">
+
+    
+    
+    
+      
+    
+
+    
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?2b512f848a24cc63465604675a8ca4fa";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</div>
+    </header>
+
+    
+  
+  
+  
+  
+
+  
+
+  <a href="https://github.com/Memento1990" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" style="fill: #222; color: #fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+
+    
+    
+      <div class="post-nav">
+        <div class="post-nav-next post-nav-item">
+          
+            <a href="/post/dcfce0c7.html" rel="next" title="[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud">
+              <i class="fa fa-chevron-left"></i> [Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud
+            </a>
+          
+        </div>
+
+        <span class="post-nav-divider"></span>
+
+        <div class="post-nav-prev post-nav-item">
+          
+            <a href="/post/eee682a1.html" rel="prev" title="Windows 添加 VSCode 右键菜单">
+              Windows 添加 VSCode 右键菜单 <i class="fa fa-chevron-right"></i>
+            </a>
+          
+        </div>
+      </div>
+    
+
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://memento.net.cn/post/3f9a8db3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Memento">
+      <meta itemprop="description" content="吾生也有涯, 而知也无涯">
+      <meta itemprop="image" content="/images/favicon-64x64.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="琅涯阁">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">[Hexo 博客系列-00] 基础安装部署教程
+
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          
+          
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-26 08:46:55" itemprop="dateCreated datePublished" datetime="2019-04-26T08:46:55+08:00">2019-04-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-06-15 22:09:36" itemprop="dateModified" datetime="2020-06-15T22:09:36+08:00">2020-06-15</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">668</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p></p>
+<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>加了几个 Hexo 的技术讨论群, 经常可以讨论一些 hexo 的技巧和解决一些问题, 挺好的. 这些群号会在文末进行分享, 当然也有一个是阁主想搭建并长期维护和分享的 Hexo 技术讨论群, 欢迎大家的加入~</p>
+<p>这段期间里, 在群里偶尔会遇见一些没有开发经验的人, 他们也想要搭建起一个自己的博客平台, 分享自己的知识总结, 所见所闻. 但是对于 hexo 的安装配置过程总是遇见或这或那的问题, 网上查询解决办法也是磕磕绊绊的, 总结就两个字: 郁闷(＃￣～￣＃)</p>
+<p>本来阁主是在维护一个 <a href="http://memento.net.cn/post/3943aa90.html">Hexo 博客系列</a> 的, 里面的内容主要想介绍一些<a href="http://memento.net.cn/post/4f47e744.html">基本设置</a>, <a href="http://memento.net.cn/post/67805eb2.html">插件安装使用</a>, <a href="http://memento.net.cn/post/bc92e064.html">主题深度定制</a>的内容的, 没想着再去写一篇基础的安装部署教程的, 因为阁主在安装部署的时候, 可以从网上找到一箩筐的安装部署教程, 虽然参差不齐, 但好在量多, 同时参考一两篇, 阁主原以为搞定这些还是不成问题的. 但是~还是从网友那里发现了这样那样的问题, 而且网上也不容易搜索到相对应的解决方法. 所以阁主在这里补上这第 00 篇的教程~ 烦请不吝赐教.</p>
+<h2 id="2-前提"><a href="#2-前提" class="headerlink" title="2. 前提"></a>2. 前提</h2><p>首先呢, 如果是个真小白, 就是不会编程, 不会前端, 不会这, 不会那的, 阁主一万个建议你规规矩矩选择 NexT 主题, 为啥嘞, 因为其有一个靠得住的团队支持, 再因为就是网上资源多, 最后因为用的人多帮你的人也就多~<br>当然, 这个主题还是不错的, 提供了四种模板可供选择, </p>
+<p>如果你强行坚持使用其他主题, 阁主的系列文章你只能当做参考喽~祝君好运!!!</p>
+<h2 id="3-正文"><a href="#3-正文" class="headerlink" title="3. 正文"></a>3. 正文</h2><h3 id="3-1-准备工作"><a href="#3-1-准备工作" class="headerlink" title="3.1. 准备工作"></a>3.1. 准备工作</h3>
+      
+    </div>
+
+    
+    
+    
+
+    <div>
+      
+        <div>
+    
+        <br>
+        <div style="text-align:center;color: #ccc;font-size:14px;">--------------------本文至此结束&nbsp;<i class="fa fa-heartbeat"></i>&nbsp;感谢您的阅读--------------------</div>
+        <br>
+    
+</div>
+      
+    </div>
+
+    
+      
+
+  <blockquote>
+    <div class="popular-posts-header">猜你还想看</div>
+  </blockquote>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\post\3943aa90.html" rel="bookmark">[文章汇总] Hexo 博客系列 [最近更新: 2019/04/24]</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\post\b96cbb80.html" rel="bookmark">[Hexo 博客插件系列-03] 博客备份 hexo-git-backup</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\post\dcfce0c7.html" rel="bookmark">[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\post\7bf40deb.html" rel="bookmark">[Hexo 博客 FAQ 系列-01] warning LF will be replaced by CRLF in</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="\post\6f3f19b1.html" rel="bookmark">[Hexo 博客插件系列-02] 语雀 yuque-hexo</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    <div>
+      
+        
+  <div class="my_post_copyright">
+    <p><span>本文标题:</span><a href="/post/3f9a8db3.html">[Hexo 博客系列-00] 基础安装部署教程</a></p>
+    <p><span>文章作者:</span><a href="/" title="访问 Memento 的个人博客">Memento</a></p>
+    <p><span>发布时间:</span>2019年04月26日 - 08:04</p>
+    <p><span>最后更新:</span>2020年06月15日 - 22:06</p>
+    <p><span>原始链接:</span><a href="/post/3f9a8db3.html" title="[Hexo 博客系列-00] 基础安装部署教程">https://memento.net.cn/post/3f9a8db3.html</a></p>
+    <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+  </div>
+  <script>
+    function addLink() {
+        var body_element = document.body;
+        var selection = window.getSelection();
+        var line1 = "原文出自[Memento 博客](http://memento.net.cn)";
+        var line2 = "除特别声明外，署名-非商业性使用-禁止演绎 4.0 国际";
+        var line3 = "转载请保留原文链接及作者: " + document.location.href;
+        if (window.clipboardData) { // Internet Explorer 
+            var copytext = selection + "\r\n\r\n" + line1 + "\n" + line2 + "\n" + line3;
+            window.clipboardData.setData("Text", copytext);
+            return false;
+        }
+        else {
+            var copytext = selection + "<br /><br />" + line1 + "<br />" + line2 + "<br />" + line3;
+            var newdiv = document.createElement('div');
+            newdiv.style.position = 'absolute';
+            newdiv.style.left = '-99999px';
+            body_element.appendChild(newdiv);
+            newdiv.innerHTML = copytext;
+            selection.selectAllChildren(newdiv);
+            window.setTimeout(function () {
+                body_element.removeChild(newdiv);
+            }, 0);
+        }
+    }
+    document.oncopy = addLink;
+  </script>
+
+      
+    </div>
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+          
+            <a href="/tags/新手/" rel="tag"><i class="fa fa-tag"></i> 新手</a>
+          
+            <a href="/tags/小白/" rel="tag"><i class="fa fa-tag"></i> 小白</a>
+          
+            <a href="/tags/攻略/" rel="tag"><i class="fa fa-tag"></i> 攻略</a>
+          
+            <a href="/tags/安装/" rel="tag"><i class="fa fa-tag"></i> 安装</a>
+          
+            <a href="/tags/部署/" rel="tag"><i class="fa fa-tag"></i> 部署</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+
+  
+  
+    <div class="post-nav">
+      <div class="post-nav-next post-nav-item">
+        
+          <a href="/post/dcfce0c7.html" rel="next" title="[Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud">
+            <i class="fa fa-chevron-left"></i> [Hexo 博客插件系列-04] 3D标签云 svg3dtagcloud
+          </a>
+        
+      </div>
+
+      <span class="post-nav-divider"></span>
+
+      <div class="post-nav-prev post-nav-item">
+        
+          <a href="/post/eee682a1.html" rel="prev" title="Windows 添加 VSCode 右键菜单">
+            Windows 添加 VSCode 右键菜单 <i class="fa fa-chevron-right"></i>
+          </a>
+        
+      </div>
+    </div>
+  
+
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+    <div class="sidebar-toggle">
+        <div class="sidebar-toggle-line-wrap">
+            <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+            <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+            <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+        </div>
+    </div>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-inner">
+            
+            
+            <ul class="sidebar-nav motion-element">
+                <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+                    文章目录
+                </li>
+                <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+                    站点概览
+                </li>
+            </ul>
+            
+
+            <div class="site-overview-wrap sidebar-panel">
+                <div class="site-overview">
+                    <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                        
+                        <img class="site-author-image" itemprop="image" src="/images/favicon-64x64.png" alt="Memento">
+                        
+                        <p class="site-author-name" itemprop="name">Memento</p>
+                        <div class="site-description motion-element" itemprop="description">吾生也有涯, 而知也无涯</div>
+                    </div>
+
+                    
+                    <nav class="site-state motion-element">
+                        
+                        <div class="site-state-item site-state-posts">
+                            
+                            <a href="/archives/">
+                            
+                                <span class="site-state-item-count">19</span>
+                                <span class="site-state-item-name">日志</span>
+                            </a>
+                        </div>
+                        
+
+                        
+                        
+                        
+                        <div class="site-state-item site-state-categories">
+                            
+                                
+                                <a href="/categories/">
+                                
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <span class="site-state-item-count">4</span>
+                                <span class="site-state-item-name">分类</span>
+                            
+                                </a>
+                            
+                        </div>
+                        
+
+                        
+                        
+                        
+                        <div class="site-state-item site-state-tags">
+                            
+                                
+                                <a href="/tags/">
+                                
+                            
+                                
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                <span class="site-state-item-count">38</span>
+                                <span class="site-state-item-name">标签</span>
+                            
+                                </a>
+                            
+                        </div>
+                        
+                    </nav>
+                    
+
+                    
+
+                    
+
+                    
+                    <div class="links-of-author motion-element">
+                        
+                            <span class="links-of-author-item">
+                                
+                                
+                                    
+                                
+                                
+                                    
+                                
+                                <a href="https://github.com/Memento1990" title="GitHub &rarr; https://github.com/Memento1990" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                            </span>
+                        
+                            <span class="links-of-author-item">
+                                
+                                
+                                    
+                                
+                                
+                                    
+                                
+                                <a href="http://www.cnblogs.com/memento" title="博客园 &rarr; http://www.cnblogs.com/memento" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-star"></i>博客园</a>
+                            </span>
+                        
+                            <span class="links-of-author-item">
+                                
+                                
+                                    
+                                
+                                
+                                    
+                                
+                                <a href="https://blog.csdn.net/qq_42025719" title="CSDN &rarr; https://blog.csdn.net/qq_42025719" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-codiepie"></i>CSDN</a>
+                            </span>
+                        
+                            <span class="links-of-author-item">
+                                
+                                
+                                    
+                                
+                                
+                                    
+                                
+                                <a href="mailto:731996261@qq.com" title="E-Mail &rarr; mailto:731996261@qq.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                            </span>
+                        
+                    </div>
+                    
+
+                    
+
+                    
+                    
+
+                    
+                        
+                    
+                    
+                </div>
+            </div>
+            
+            <!--noindex-->
+            <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+                <div class="post-toc">
+                    
+                    
+                    
+                    
+                            
+                    
+                    
+                    <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1. 前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-前提"><span class="nav-number">2.</span> <span class="nav-text">2. 前提</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-正文"><span class="nav-number">3.</span> <span class="nav-text">3. 正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-准备工作"><span class="nav-number">3.1.</span> <span class="nav-text">3.1. 准备工作</span></a></li></ol></li></ol></div>
+                    
+                </div>
+            </div>
+            <!--/noindex-->
+            
+
+            
+            <div class="back-to-top">
+                <i class="fa fa-arrow-up"></i>
+                
+                <span id="scrollpercent"><span>0</span>%</span>
+                
+            </div>
+            
+        </div>
+    </aside>
+    
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2019 – <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">琅涯阁</span>
+  
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">47k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">43 分钟</span>
+  
+
+  <a href="http://www.beian.miit.gov.cn/" rel="external nofollow noopener noreferrer" target="_blank">粤ICP备19147538号</a>
+</div>
+<span id="sitetime"></span>
+
+
+
+
+
+
+
+
+
+
+<script language="javascript">
+  function siteTime(){
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth()+1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    var t1 = Date.UTC(2019,03,18,16,39,37); // 设置建立网站的时间
+    var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+    var diff = t2-t1;
+    var diffYears = Math.floor(diff/years);
+    var diffDays = Math.floor((diff/days)-diffYears*365);
+    var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+    var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+    var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+    document.getElementById("sitetime").innerHTML=" 本站已运行 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+  }
+  siteTime();
+</script>
+        
+
+
+
+
+
+
+    <div>
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276813148'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276813148%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.1/velocity.ui.min.js"></script>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.6/jquery.fancybox.min.js"></script>
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/src/affix.js?v=7.0.1"></script>
+
+  <script src="/js/src/schemes/pisces.js?v=7.0.1"></script>
+
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
     var isfetched = false;
     var isXml = true;
     // Search DB path;
@@ -314,4 +1595,96 @@
       if (shouldDismissSearchPopup) {
         onPopupClose();
       }
-    });</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0];t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}()</script><script>$(".highlight").each(function(t,e){var n=$("<div>").addClass("highlight-wrap");$(e).after(n),n.append($("<button>").addClass("copy-btn").append("复制").on("click",function(t){var e=$(this).parent().find(".code").find(".line").map(function(t,e){return $(e).text()}).toArray().join("\n"),n=document.createElement("textarea"),o=window.pageYOffset||document.documentElement.scrollTop;n.style.top=o+"px",n.style.position="absolute",n.style.opacity="0",n.readOnly=!0,n.value=e,document.body.appendChild(n),n.select(),n.setSelectionRange(0,e.length),n.readOnly=!1,document.execCommand("copy")?$(this).text("复制成功"):$(this).text("复制失败"),n.blur(),$(this).blur()})).on("mouseleave",function(t){var e=$(this).find(".copy-btn");setTimeout(function(){e.text("复制")},300)}).append(e)})</script></body></html>
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
