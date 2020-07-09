@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2Fpost%2F0.html</url>
-    <content type="text"><![CDATA[数据化运营: 指通过数据化的工具, 技术和方法, 对运营过程中的各个环节进行科学分析, 引导和应用, 从而达到优化运营效果和效率, 降低成本, 提高效益的目的; 辅助决策式数据化运营 数据驱动式数据化运营 数据驱动式数据化运营工作流程: Python and Jupyter查看 Jupyter 可用内核 jupyter kernelspec list; 批量到处 Python 的第三方库列表: pip freeze &gt; requirements.txt 批量安装第三方库列表到新环境中: pip install -r requirements.txt 查看所有第三方库及其版本列表信息: pip list python 导入库两种方式: 直接导入库, import 库名 导入库中的函数, from 库名 import 函数名 Python 第三方库 OCRORC 工具 Tesseract-ocr 下载地址: https://sourceforge.net/projects/tesseract-ocr-alt/files/github 地址: https://github.com/tesseract-ocr/tesseract 注: 以下代码在 vscode 中运行 12345678910111213141516171819202122232425262728293031323334353637383940414243444546#%%# 1. 导入库import pandas as pdfrom matplotlib import pyplot as pltfrom sklearn import linear_modelfrom sklearn.metrics import mean_squared_error, r2_score#%%# 2. 读取数据raw_data = pd.read_csv('data.txt')#%%# 3. 数据预处理num = int(raw_data.shape[0] * 0.7)x, y = raw_data[['money']], raw_data[['amount']]x_train, x_test = x[:num], x[num:]y_train, y_test = y[:num], y[num:]#%%# 4. 探索性数据分析# 散点图观察plt.scatter(x_train, y_train)# %%# 5. 数据建模model = linear_model.LinearRegression()model.fit(x_train, y_train)#%%# 6. 模型评估predict_test_y = model.predict(x_test)print("Mean squared error: %.0f" % mean_squared_error(y_test, predict_test_y))print("Variance score: %.2f" % r2_score(y_test, predict_test_y))# %%# 7. 线性回归参数model_coef = model.coef_model_intercept = model.intercept_print("coef is: ", model_coef)print("intercept is: ", model_intercept)# %%# 8. 销售预测应用new_x = 84610pre_y = model.predict([[new_x]])print(pre_y)]]></content>
+    <title><![CDATA[第一章 Python 和数据化运营]]></title>
+    <url>%2Fpost%2F63a6e235.html</url>
+    <content type="text"><![CDATA[数据化运营: 指通过数据化的工具, 技术和方法, 对运营过程中的各个环节进行科学分析, 引导和应用, 从而达到优化运营效果和效率, 降低成本, 提高效益的目的; 辅助决策式数据化运营 数据驱动式数据化运营 1. 数据驱动式数据化运营工作流程: 2. Python and Jupyter查看 Jupyter 可用内核 jupyter kernelspec list; 批量到处 Python 的第三方库列表: pip freeze &gt; requirements.txt 批量安装第三方库列表到新环境中: pip install -r requirements.txt 查看所有第三方库及其版本列表信息: pip list python 导入库两种方式: 直接导入库, import 库名 导入库中的函数, from 库名 import 函数名 3. Python 第三方库 4. OCRORC 工具 Tesseract-ocr 下载地址: https://sourceforge.net/projects/tesseract-ocr-alt/files/github 地址: https://github.com/tesseract-ocr/tesseract 5. 代码 注: 以下代码在 vscode 中运行 12345678910111213141516171819202122232425262728293031323334353637383940414243444546#%%# 1. 导入库import pandas as pdfrom matplotlib import pyplot as pltfrom sklearn import linear_modelfrom sklearn.metrics import mean_squared_error, r2_score#%%# 2. 读取数据raw_data = pd.read_csv('data.txt')#%%# 3. 数据预处理num = int(raw_data.shape[0] * 0.7)x, y = raw_data[['money']], raw_data[['amount']]x_train, x_test = x[:num], x[num:]y_train, y_test = y[:num], y[num:]#%%# 4. 探索性数据分析# 散点图观察plt.scatter(x_train, y_train)# %%# 5. 数据建模model = linear_model.LinearRegression()model.fit(x_train, y_train)#%%# 6. 模型评估predict_test_y = model.predict(x_test)print("Mean squared error: %.0f" % mean_squared_error(y_test, predict_test_y))print("Variance score: %.2f" % r2_score(y_test, predict_test_y))# %%# 7. 线性回归参数model_coef = model.coef_model_intercept = model.intercept_print("coef is: ", model_coef)print("intercept is: ", model_intercept)# %%# 8. 销售预测应用new_x = 84610pre_y = model.predict([[new_x]])print(pre_y)]]></content>
+      <categories>
+        <category>读书笔记</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>读书笔记</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Linux 命令 TOP]]></title>
